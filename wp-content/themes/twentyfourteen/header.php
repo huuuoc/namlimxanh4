@@ -49,31 +49,30 @@
 				<span class="hotline">Hotline: 04.3797.0138</span>
 				<span class="search-top">search</span>
 			</div>
-			
 		</div>
 	</div>
 	<div class="header-container">
 		<div class="header">
 			<header id="masthead" class="site-header" role="banner">
 				<div class="header-main">
-					<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><?php bloginfo( 'name' ); ?></a></h1>
-
-					<div class="search-toggle">
-						<a href="#search-container" class="screen-reader-text" aria-expanded="false" aria-controls="search-container"><?php _e( 'Search', 'twentyfourteen' ); ?></a>
+					<div class="logo">
+						<?php if ( is_front_page() && is_home() ) : ?>
+							<h1 class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Nấm lim xanh" /></a></h1>
+						<?php else : ?>
+							<p class="site-title"><a href="<?php echo esc_url( home_url( '/' ) ); ?>" rel="home"><img src="<?php echo get_template_directory_uri(); ?>/images/logo.png" alt="Nấm lim xanh" /></a></p>
+						<?php endif;?>
 					</div>
-
 					<nav id="primary-navigation" class="site-navigation primary-navigation" role="navigation">
 						<button class="menu-toggle"><?php _e( 'Primary Menu', 'twentyfourteen' ); ?></button>
 						<a class="screen-reader-text skip-link" href="#content"><?php _e( 'Skip to content', 'twentyfourteen' ); ?></a>
 						<?php wp_nav_menu( array( 'theme_location' => 'primary', 'menu_class' => 'nav-menu', 'menu_id' => 'primary-menu' ) ); ?>
 					</nav>
 				</div>
-
-				<div id="search-container" class="search-box-wrapper hide">
-					<div class="search-box">
-						<?php get_search_form(); ?>
-					</div>
-				</div>
+				<?php 
+				if ( is_front_page() && is_home() ) :
+					echo do_shortcode("[metaslider id=11]");
+				endif;
+				?>
 			</header><!-- #masthead -->
 		</div><!-- #header -->
 	</div><!-- #header-container -->

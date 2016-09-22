@@ -57,7 +57,47 @@ Use it to make something cool, have fun, and share what you've learned with othe
  *
  * -----------------------------------------------------------------------------
  */
-
+/* font-family: "MyriadProRegular"; */
+@font-face {
+    font-family: "MyriadProRegular";
+    src: url("fonts/MyriadProRegular/MyriadProRegular.eot");
+    src: url("fonts/MyriadProRegular/MyriadProRegular.eot?#iefix")format("embedded-opentype"),
+    url("fonts/MyriadProRegular/MyriadProRegular.woff") format("woff"),
+    url("fonts/MyriadProRegular/MyriadProRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "MyriadProBold"; */
+@font-face {
+    font-family: "MyriadProBold";
+    src: url("fonts/MyriadProBold/MyriadProBold.eot");
+    src: url("fonts/MyriadProBold/MyriadProBold.eot?#iefix")format("embedded-opentype"),
+    url("fonts/MyriadProBold/MyriadProBold.woff") format("woff"),
+    url("fonts/MyriadProBold/MyriadProBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "TimesNewRomanRegular"; */
+@font-face {
+    font-family: "TimesNewRomanRegular";
+    src: url("fonts/TimesNewRomanRegular/TimesNewRomanRegular.eot");
+    src: url("fonts/TimesNewRomanRegular/TimesNewRomanRegular.eot?#iefix")format("embedded-opentype"),
+    url("fonts/TimesNewRomanRegular/TimesNewRomanRegular.woff") format("woff"),
+    url("fonts/TimesNewRomanRegular/TimesNewRomanRegular.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+/* font-family: "TimesNewRomanBold"; */
+@font-face {
+    font-family: "TimesNewRomanBold";
+    src: url("fonts/TimesNewRomanBold/TimesNewRomanBold.eot");
+    src: url("fonts/TimesNewRomanBold/TimesNewRomanBold.eot?#iefix")format("embedded-opentype"),
+    url("fonts/TimesNewRomanBold/TimesNewRomanBold.woff") format("woff"),
+    url("fonts/TimesNewRomanBold/TimesNewRomanBold.ttf") format("truetype");
+    font-style: normal;
+    font-weight: normal;
+}
+ 
 html, body, div, span, applet, object, iframe, h1, h2, h3, h4, h5, h6, p, blockquote, pre, a, abbr, acronym, address, big, cite, code, del, dfn, em, font, ins, kbd, q, s, samp, small, strike, strong, sub, sup, tt, var, dl, dt, dd, ol, ul, li, fieldset, form, label, legend, table, caption, tbody, tfoot, thead, tr, th, td {
 	border: 0;
 	font-family: inherit;
@@ -817,13 +857,18 @@ span + .edit-link:before,
  * 3.0 Basic Structure
  * -----------------------------------------------------------------------------
  */
-
+ul{
+	list-style: none;
+	margin: 0;
+}
 .site {
-	background-color: #fff;
 	position: relative;
 	margin: 0 auto;
 }
-
+.site-main{
+	background: #fff;
+	padding: 0 0 0 10px;
+}
 .main-content {
 	width: 100%;
 }
@@ -854,13 +899,16 @@ span + .edit-link:before,
 	height: 100%;
 	float: left;
 } 
+.header-container{
+	padding-top: 10px;
+	background: url(images/bg-header.png) repeat-x center top;
+}
 .header, .main,.footer,.header-link-top{
 	margin: 0 auto;
 	max-width: 998px;
 }
 .header-top{
 	background: #eff2e7;
-	
 	font-weight: 400;
 	font-size: 12px;
 	line-height: 30px;
@@ -883,18 +931,206 @@ span + .edit-link:before,
 	display: inline-block;
 	width: 18px;
 }
+.site-title{
+	padding: 2px 3px;
+}
+.header-main .logo{
+	width: 100%;
+	float: left;
+	background: url(images/banner.png) no-repeat center center;
+}
+.header .header-main{
+	padding: 0;
+}
+nav.primary-navigation{
+	float: left;
+	width: 100%;
+	margin : 0;
+	background: url(images/bg-menu.png) repeat-x center center;
+	margin: 5px 0;
+	border-radius: 10px 10px 0 0;
+}
+.metaslider {
+	width: 100%;
+	float: left;
+}
+nav.primary-navigation ul.nav-menu  > li{
+	line-height: 40px;
+	height: 40px;
+	border-right: 1px solid #b5c4a7;
+	float: left;
+	font-family:"MyriadProBold";
+	font-size: 14px;	
+}
+nav.primary-navigation ul.nav-menu  > li:hover a{
+	background: url(images/bg-menu-active.png) repeat-x center center!important;
+}
+nav.primary-navigation ul.nav-menu  > li:last-child:hover a{
+	border-radius: 0 10px 0 0;
+}
+nav.primary-navigation ul.nav-menu  > li:first-child:hover a{
+	border-radius: 10px 0 0 0;
+}
+nav.primary-navigation ul.nav-menu  > li:last-child{
+	border: 0;
+}
+nav.primary-navigation a{
+	padding: 0 17px;
+}
+nav.primary-navigation ul.nav-menu  > li:last-child a{
+	padding: 0 21px;
+}
+.site-navigation ul.nav-menu  > li.current_page_item > a,
+.site-navigation  ul.nav-menu  > li.current_page_ancestor > a,
+.site-navigation  ul.nav-menu  > li.current-menu-item > a,
+.site-navigation  ul.nav-menu  > li.current-menu-ancestor > a{
+	background: url(images/bg-menu-active.png) repeat-x center center!important;
+	color: #fff;
+}
+.site-navigation ul.nav-menu  > li:first-child.current_page_item > a,
+.site-navigation  ul.nav-menu  > li:first-child.current_page_ancestor > a,
+.site-navigation  ul.nav-menu  > li:first-child.current-menu-item > a,
+.site-navigation  ul.nav-menu  > li:first-child.current-menu-ancestor > a
+{
+	border-radius: 10px 0 0 0;
+}
+.site-navigation ul.nav-menu  > li:last-child.current_page_item > a,
+.site-navigation  ul.nav-menu  > li:last-child.current_page_ancestor > a,
+.site-navigation  ul.nav-menu  > li:last-child.current-menu-item > a,
+.site-navigation  ul.nav-menu  > li:last-child.current-menu-ancestor > a{
+	border-radius: 0 10px 0 0;
+}
+.block-angency{
+	float: left; 
+	width: 100%;
+	margin-bottom: 10px;
+}
+.block-angency .tab {
+	width: 66.66%;
+	float: left;
+}
+
+.tab-content {
+	width: 100%;
+	float: left;
+}
+.tab-link li{
+	float: left;
+	width: 33.33%;
+	text-align: center;
+	color: #fff;
+	font-family: "MyriadProRegular";
+	font-size: 13px;
+	text-transform: uppercase;
+	line-height: 30px;
+	background:#22500d url(images/bg-angency.png) no-repeat center right;
+	cursor: pointer;
+}
+.tab-link li.active{
+	background: #35871d url(images/bg-angency5.png) no-repeat center right;
+}
+.tab-link li.last{
+	background:#22500d url(images/bg-angency1.png) no-repeat center right;
+}
+.tab-link li.last.active{
+	background: #35871d url(images/bg-angency1.png) no-repeat center right;
+}
+.tab-link li.first-active{
+	background: #22500d url(images/bg-angency6.png) no-repeat center right;
+}
+
+.tab-content > div{
+	display: none;
+}
+.tab-content > div.active{
+	display: block;
+}
+.tab-content ul {
+	float: left;
+	border-left: 1px solid #c2c2c2;
+	border-top: 1px solid #c2c2c2;
+}
+
+.tab-content ul li{
+	float: left;
+	line-height: 28px;
+	min-width: 92px;
+	text-align: center;
+	background: url(images/bg-angency-item.png) no-repeat center center;
+	
+	font-size: 13.68px;
+} 
+.tab-content ul li a{ 
+	color: #575b56;
+	font-family: "TimesNewRomanRegular";
+}
+.layer-1,.layer-2{
+	width: 100%;
+	float: left;
+}
+.col-1{
+	width: 33.33%;
+	float: left;
+}
 
 
 
 
 
-
-
+.footer-logo{
+	display: inline-block;
+}
+.info-company{
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 15px;
+}
+.info-company p{
+	margin: 0;
+	padding: 2px 0;
+	clear: both;
+}
+.social{
+	margin-top: 4px;
+}
+.social h2{
+	margin: 0;
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase;
+	padding:0 10px 10px 0; 
+	text-align: right;
+	
+}
+.social li{
+	float: right;
+	list-style: none;
+	padding-left: 10px;
+}
+.footer .site-footer{
+	background: url(images/bg-footer.png) no-repeat center center;
+	background-size: cover;
+	padding: 20px 10px;
+}
+.footer .site-info{
+	padding: 0;
+	font-family: "Roboto",sans-serif;
+	font-size: 12px;
+	font-weight: 400;
+}
 
 .site-header {
 	position: relative;
 	width: 100%;
 	z-index: 4;
+}
+.info-company p.name-company{
+	font-size: 14px;
+	font-weight: 700;
+	text-transform: uppercase; 	
+	border-bottom: 1px solid #fff;
+	float: left;
+	margin-bottom: 5px;
 }
 
 .header-main {
@@ -2863,7 +3099,6 @@ a.post-thumbnail:hover {
 }
 
 .site-footer {
-	background-color: #000;
 	font-size: 12px;
 	position: relative;
 	z-index: 3;
@@ -3609,9 +3844,10 @@ a.post-thumbnail:hover {
 
 	.primary-navigation .menu-item-has-children > a,
 	.primary-navigation .page_item_has_children > a {
-		padding-right: 26px;
+		/*padding-right: 26px;*/
 	}
 
+	/*
 	.primary-navigation .menu-item-has-children > a:after,
 	.primary-navigation .page_item_has_children > a:after {
 		-webkit-font-smoothing: antialiased;
@@ -3623,6 +3859,8 @@ a.post-thumbnail:hover {
 		top: 22px;
 		vertical-align: text-bottom;
 	}
+	*/
+	
 
 	.primary-navigation li .menu-item-has-children > a,
 	.primary-navigation li .page_item_has_children > a {
