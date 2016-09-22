@@ -11,13 +11,13 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php twentyfourteen_post_thumbnail(); ?>
+	<?php// twentyfourteen_post_thumbnail(); ?>
 
 	<header class="entry-header">
 		<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) && twentyfourteen_categorized_blog() ) : ?>
-		<div class="entry-meta">
+		<!--<div class="entry-meta">
 			<span class="cat-links"><?php echo get_the_category_list( _x( ', ', 'Used between list items, there is a space after the comma.', 'twentyfourteen' ) ); ?></span>
-		</div>
+		</div>-->
 		<?php
 			endif;
 
@@ -27,8 +27,9 @@
 				the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
 			endif;
 		?>
-
+		<!--
 		<div class="entry-meta">
+			
 			<?php
 				if ( 'post' == get_post_type() )
 					twentyfourteen_posted_on();
@@ -41,7 +42,8 @@
 
 				edit_post_link( __( 'Edit', 'twentyfourteen' ), '<span class="edit-link">', '</span>' );
 			?>
-		</div><!-- .entry-meta -->
+		</div><!-- .entry-meta ->
+		-->
 	</header><!-- .entry-header -->
 
 	<?php if ( is_search() ) : ?>
@@ -66,6 +68,6 @@
 		?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
-
+	<?php if(function_exists('the_ratings')) { the_ratings(); } ?>
 	<?php the_tags( '<footer class="entry-meta"><span class="tag-links">', '', '</span></footer>' ); ?>
 </article><!-- #post-## -->
