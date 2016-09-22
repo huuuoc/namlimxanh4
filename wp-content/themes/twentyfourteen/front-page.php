@@ -59,6 +59,7 @@
 			<h2 class="title"><span lang="tab-video">Thư viện video</span> <span lang="tab-image"> thư viện ảnh</span></h2>
 				<div class="content">
 					<div id="tab-video">Video</div>
+					<div id="tab-image">Video</div>
 					<?php
 						$args1 = array(
 							'category__in' => array(4),
