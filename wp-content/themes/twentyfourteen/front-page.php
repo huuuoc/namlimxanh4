@@ -10,74 +10,124 @@
 <?php get_header(); ?>
 	<div class="layer-1">
 		<div class="col-1">
-			Công dụng nấm lim xanh
-			<?php
-				$args1 = array(
-					'category__in' => array(4),
-					'order'   => 'ASC'
-				);
-				//echo CustomQuery($args1,'featured-post','featured-post-first');
-			?>
-		</div>
-		<div class="col-1">
-			Cách dùng nấm lim xanh
-			<?php
-				$args1 = array(
-					'category__in' => array(4),
-					'order'   => 'ASC'
-				);
-				//echo CustomQuery($args1,'featured-post','featured-post-first');
-			?>
-		</div>
-		<div class="col-1">
-			Mua bán nấm lim xanh
-			<?php
-				$args1 = array(
-					'category__in' => array(4),
-					'order'   => 'ASC'
-				);
-				//echo CustomQuery($args1,'featured-post','featured-post-first');
-			?>
-		</div>
-	</div>
-	<div class="layer-2">
-		<div class="col-1">
-			<div class="block-chungnhan">
-				<h2 class="title"><span>Chứng nhận giải thưởng</span></h2>
+			<div class="content-article">
+				<h2 class="title-article">Công dụng nấm lim xanh</h2>
 				<div class="content">
 					<?php
 						$args1 = array(
-							'category__in' => array(4),
+							'category__in' => array(3,15,16),
+							'posts_per_page' => 4,
 							'order'   => 'ASC'
 						);
-						//echo CustomQuery($args1,'featured-post','featured-post-first');
+						echo CustomQuery($args1,'featured-post-home','featured-post-first');
 					?>
 				</div>
 			</div>
 		</div>
 		<div class="col-1">
-			<h2 class="title"><span lang="tab-video">Thư viện video</span> <span lang="tab-image"> thư viện ảnh</span></h2>
+			<div class="content-article">
+				<h2 class="title-article">Cách dùng nấm lim xanh</h2>
 				<div class="content">
-					<div id="tab-video">Video</div>
-					<div id="tab-image">Video</div>
 					<?php
-						$args1 = array(
-							'category__in' => array(4),
+						$args2 = array(
+							'category__in' => array(4,17,18),
+							'posts_per_page' => 4,
 							'order'   => 'ASC'
 						);
-						//echo CustomQuery($args1,'featured-post','featured-post-first');
+						echo CustomQuery($args2,'featured-post-home','featured-post-first');
 					?>
 				</div>
+			</div>
 		</div>
 		<div class="col-1">
-			Chăm sóc khách hàng
-			<?php
-				$args1 = array(
-					'category__in' => array(4),
-					'order'   => 'ASC'
-				);
-				//echo CustomQuery($args1,'featured-post','featured-post-first');
-			?>
+			<div class="content-article">
+				<h2 class="title-article">Mua bán nấm lim xanh</h2>
+				<div class="content">
+					<?php
+						$args3 = array(
+							'category__in' => array(5,19,20),
+							'posts_per_page' => 4,
+							'order'   => 'ASC'
+						);
+						echo CustomQuery($args3,'featured-post-home','featured-post-first');
+					?>
+				</div>
+			</div>
+		</div>
+	</div>
+	<div class="layer-2">
+		<div class="col-1">
+			<div class="block-chungnhan content-article">
+				<h2 class="title"><span>Chứng nhận giải thưởng</span></h2>
+				<div class="content">
+					<img src="<?php echo get_template_directory_uri(); ?>/images/chung-nhan.png" atl="Giấy chứng nhận">
+				</div>
+			</div>
+		</div>
+		<div class="col-1">
+			<div class="content-article block-video-image">
+				<h2 class="title"><span class="video active" lang="#tab-video" tab-link="title" tab-content="content">Thư viện video</span> <span class="image" lang="#tab-image"  tab-link="title" tab-content="content"> thư viện ảnh</span></h2>
+				<div class="content">
+					<div id="tab-video" class="active">
+						<?php
+							$args1 = array(
+								'category__in' => array(23),
+								'posts_per_page' => 5,
+								'order'   => 'ASC'
+							);
+							echo CustomQuery($args1,'featured-post-home','home');
+						?>
+					</div>
+					<div id="tab-image">
+						<?php
+							$args1 = array(
+								'category__in' => array(24),
+								'posts_per_page' => 5,
+								'order'   => 'ASC'
+							);
+							echo CustomQuery($args1,'featured-post-home','home');
+						?>
+					</div>
+				</div>
+			</div>
+		</div>
+		<div class="col-1">
+			<div class="content-article block-support">
+				<h2 class="title"><span lang="tab-video">Chăm sóc khách hàng</span></h2>
+				<div class="content">
+					<ul>
+						<li><a href="#">
+							<img src="<?php echo get_template_directory_uri(); ?>/images/support1.png" alt="support"/>
+							<div class="name-phone">
+								<span class="name">Tông đài tư vấn</span><br/>
+								<span class="phone">04.3797.0138</span>
+							</div>
+						</a></li>
+						<li><a href="#">
+							<img src="<?php echo get_template_directory_uri(); ?>/images/support2.png" alt="support"/>
+							<div class="name-phone">
+								<span class="name">Dược sỹ Dung</span><br/>
+								<span class="phone">0936.476.588</span>
+							</div>
+						</a></li>
+						<li><a href="#">
+							<img src="<?php echo get_template_directory_uri(); ?>/images/support3.png" alt="support"/>
+							<div class="name-phone">
+								<span class="name">Dược sỹ Hoa</span><br/>
+								<span class="phone">0919.257.838</span>
+							</div>
+						</a></li>
+						<li><a href="#">
+							<img src="<?php echo get_template_directory_uri(); ?>/images/support4.png" alt="support"/>
+							<div class="name-phone">
+								<span class="name">Hỗ trợ hậu mãi</span><br/>
+								<span class="phone">04.85878602</span>
+							</div>
+						</a></li>
+						
+					</ul>
+				</div>
+			</div>
 		</div>
 	</div>
 <?php // get_sidebar(); 

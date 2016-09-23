@@ -962,7 +962,7 @@ nav.primary-navigation ul.nav-menu  > li{
 	font-family:"MyriadProBold";
 	font-size: 14px;	
 }
-nav.primary-navigation ul.nav-menu  > li:hover a{
+nav.primary-navigation ul.nav-menu  > li:hover  > a{
 	background: url(images/bg-menu-active.png) repeat-x center center!important;
 }
 nav.primary-navigation ul.nav-menu  > li:last-child:hover a{
@@ -999,6 +999,10 @@ nav.primary-navigation ul.nav-menu  > li:last-child a{
 .site-navigation  ul.nav-menu  > li:last-child.current-menu-item > a,
 .site-navigation  ul.nav-menu  > li:last-child.current-menu-ancestor > a{
 	border-radius: 0 10px 0 0;
+}
+.sub-menu a{
+	background: none!important;
+	font-family: "MyriadProRegular"!important;
 }
 .block-angency{
 	float: left; 
@@ -1077,9 +1081,148 @@ nav.primary-navigation ul.nav-menu  > li:last-child a{
 	 margin: 0!important;
 	 max-width: 100%!important;
  }
-
-
-
+.content-article{
+	padding: 0 10px 0 0;
+}
+.layer-1,.layer-2{
+	margin-bottom: 10px;
+}
+.layer-1 .content-article .title-article{
+	margin: 0;
+	font: 700 18px/18px "Roboto";
+	text-transform: uppercase;
+	color: #22700b;
+	text-align: center;
+	padding: 13px 0 6px;
+	background: url(images/border-bottom-block.png) no-repeat center bottom;
+	margin-bottom: 10px;
+}
+.layer-1 .content-article  .content{
+	border: 1px solid #f0f0f0;
+	padding: 10px;
+	font-size: 14px;
+}
+.layer-1 .content-article  .content h2{
+	margin: 0;
+	font-size: 14px;
+}
+.layer-1 .content-article .content article.first{
+	padding: 0;
+	margin: 0;
+	background: none;
+}
+.layer-1 .content-article .content article.first h2{
+	margin: 0;
+	padding-bottom: 10px;
+	font-size: 16px;
+	line-height: 16px;
+	min-height: 34px;
+}
+.layer-1 .content-article .content article{
+	margin: 0 0 0 19px;
+	padding: 0 0 0 15px;
+	background: url(images/bg-article.png) no-repeat left top 4px;
+}
+.layer-1 .content-article .content article a{
+	color: #444545;
+	font-family: "MyriadProRegular";
+	font-weight: 300;
+}
+.layer-1 .content-article article.first h2 a{
+	font: 700 16px/16px "MyriadProBold";
+	display: inline-block;
+	color: #22700b;
+}
+.layer-1 .content-article article.first .desc-title{
+	font: 300 14px/16px "Arial";
+	text-align: justify;
+	padding: 8px 0;
+	margin-bottom: 10px;
+	border-bottom: 1px solid #f0f0f0;
+}
+.layer-2 .content{
+	background: #f3f6ef;
+}
+.layer-2 h2.title{
+	margin: 0;
+	font: 700 18px/50px "Roboto";
+	text-transform: uppercase;
+	background: #22500d;
+	color: #fff;
+	text-align: center;
+}
+.layer-2 h2.title span.video{
+	padding-right: 14px;
+	margin-right: 14px;
+	display: inline-block;
+	line-height: 15px;
+	border-right: 1px solid #fff;
+}
+.block-support ul li{
+	float: left;
+	width: 100%;
+	text-align: center;
+	padding: 9px 0;
+	border-bottom: 1px solid #fff;
+	
+}
+.block-support img {
+	display: inline-block;
+}
+.block-support .name-phone{
+	display: inline-block;
+	vertical-align: middle;
+	padding-left: 15px;
+	
+}
+.block-chungnhan .content{
+	padding: 10px 0;
+	text-align: center;
+}
+.block-support .name-phone span {
+	font: 300 21.91px "MyriadProRegular";
+	color: #242423;
+}
+.block-support .name-phone span.phone{
+	color: #ea721e;
+	font-size: 28px;
+} 
+.block-video-image  .content{
+	padding: 10px;
+	font: 300 14px/16px "MyriadProRegular";
+	min-height: 399px;
+}
+.block-video-image  .content > div{
+	display: none;
+}
+.block-video-image  .content h2{
+	min-height: 32px;
+	margin: 0;
+	font: 300 14px/16px "MyriadProRegular";
+	background: url(images/bg-article1.png) no-repeat top 4px left ;
+	padding-left: 11px;
+}
+.block-video-image .entry-summary{
+	display: none;
+}
+.block-video-image  .content h2 a{
+	font: 300 14px/16px "MyriadProRegular";
+}
+.block-video-image  .content article.first h2 a{
+	font: 700 14px/16px "MyriadProBold";
+}
+.block-video-image .content article.first h2{
+	background: none;
+	padding: 8px 0 8px;
+	padding-left: 0;
+}
+.block-video-image  .content > div.active{
+	display: block;
+}
+.block-video-image  .content article.first img{
+	width: 100%;
+	height: 201px;
+}
 
 .footer-logo{
 	display: inline-block;
@@ -3805,7 +3948,7 @@ a.post-thumbnail:hover {
 		float: left;
 		margin: 0;
 		position: absolute;
-		top: 48px;
+		top: 40px;
 		left: -999em;
 		z-index: 99999;
 	}
@@ -3826,6 +3969,8 @@ a.post-thumbnail:hover {
 		padding: 18px 12px;
 		white-space: normal;
 		width: 176px;
+		text-transform: none;
+		font-weight: 300!important;
 	}
 
 	.primary-navigation li:hover > a,

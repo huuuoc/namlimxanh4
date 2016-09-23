@@ -70,7 +70,7 @@
 				</div>
 				<?php 
 				if ( is_front_page() && is_home() ) :
-					echo do_shortcode("[metaslider id=4]");
+					echo do_shortcode("[metaslider id=11]");
 				endif;
 				?>
 			</header><!-- #masthead -->

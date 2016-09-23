@@ -206,14 +206,17 @@
 			} );
 		}
 	} );
-	$('.tab-link li').click(function(){
+	$('.tab-link li,.title > span').click(function(){
 		if (!$(this).hasClass('active')) {
 			var id = $(this).attr('lang');
-			$('.tab-link li.active').removeClass('active');
-			$('.tab-content > div.active').removeClass('active');
+			var tabLink =$(this).attr('tab-link');
+			var tabContent =$(this).attr('tab-content');
+			
+			$('.'+ tabLink +' .active').removeClass('active');
+			$('.'+ tabContent +' > div.active').removeClass('active');
 			$(this).addClass('active'); 
-			$('.tab-content > div'+id).addClass('active');
-			$('.tab-link li.first-active').removeClass('first-active');
+			$('.'+ tabContent +' > div'+id).addClass('active');
+			$('.'+tabLink+' li.first-active').removeClass('first-active');
 			$(this).prev().addClass('first-active');
 		}
 	});

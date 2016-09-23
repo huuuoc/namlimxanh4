@@ -12,9 +12,9 @@
 				<div class="block-angency">
 					<div class="tab">
 						<ul class="tab-link">
-							<li class="active" lang="#tab1">Đại lý Miền Bắc</li>
-							<li lang="#tab2">Đại lý Miền Trung</li>
-							<li lang="#tab3" class="last">Đại lý Miền Nam</li>
+							<li class="active" lang="#tab1" tab-link="tab-link" tab-content="tab-content">Đại lý Miền Bắc</li>
+							<li lang="#tab2" tab-link="tab-link" tab-content="tab-content">Đại lý Miền Trung</li>
+							<li lang="#tab3" class="last" tab-link="tab-link" tab-content="tab-content">Đại lý Miền Nam</li>
 						</ul>
 					</div>
 					<div class="tab-content">
