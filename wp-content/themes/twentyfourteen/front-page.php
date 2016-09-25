@@ -20,7 +20,10 @@
 							'order'   => 'ASC'
 						);
 						echo CustomQuery($args1,'featured-post-home','featured-post-first');
+						 $category_link1 = get_category_link(3);
 					?>
+					<!-- Print a link to this category -->
+					<a class="show-all" href="<?php echo esc_url( $category_link1 ); ?>" title="Category Name"> >> Xem thêm << </a>
 				</div>
 			</div>
 		</div>
@@ -35,7 +38,9 @@
 							'order'   => 'ASC'
 						);
 						echo CustomQuery($args2,'featured-post-home','featured-post-first');
+						 $category_link2 = get_category_link(4);
 					?>
+					<a class="show-all" href="<?php echo esc_url( $category_link2 ); ?>" title="Category Name"> >> Xem thêm << </a>
 				</div>
 			</div>
 		</div>
@@ -50,7 +55,9 @@
 							'order'   => 'ASC'
 						);
 						echo CustomQuery($args3,'featured-post-home','featured-post-first');
+						 $category_link3 = get_category_link(5);
 					?>
+					<a class="show-all" href="<?php echo esc_url( $category_link3 ); ?>" title="Xem thêm"> >> Xem thêm << </a>
 				</div>
 			</div>
 		</div>
@@ -99,7 +106,7 @@
 						<li><a href="#">
 							<img src="<?php echo get_template_directory_uri(); ?>/images/support1.png" alt="support"/>
 							<div class="name-phone">
-								<span class="name">Tông đài tư vấn</span><br/>
+								<span class="name">Tổng đài tư vấn</span><br/>
 								<span class="phone">04.3797.0138</span>
 							</div>
 						</a></li>

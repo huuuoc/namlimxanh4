@@ -9,55 +9,58 @@
  * @since Twenty Fourteen 1.0
  */
 ?>
-				<div class="block-angency">
-					<div class="tab">
-						<ul class="tab-link">
-							<li class="active" lang="#tab1" tab-link="tab-link" tab-content="tab-content">Đại lý Miền Bắc</li>
-							<li lang="#tab2" tab-link="tab-link" tab-content="tab-content">Đại lý Miền Trung</li>
-							<li lang="#tab3" class="last" tab-link="tab-link" tab-content="tab-content">Đại lý Miền Nam</li>
-						</ul>
-					</div>
-					<div class="tab-content">
-						<div id="tab1" class="active">
-							<ul>
-								<?php
-									$args1 = array(
-										'category__in' => array(9),
-										'order'   => 'ASC'
-									);
-									echo CustomQuery($args1,'featured-post');
-								?>
-							</ul>
-						</div>
-						<div id="tab2">
-							<ul>
-								<?php
-									$args1 = array(
-										'category__in' => array(10),
-										'order'   => 'ASC'
-									);
-									echo CustomQuery($args1,'featured-post');
-								?>
-							</ul>
-						</div>
-						<div id="tab3">
-							<ul>
-								<?php
-									$args1 = array(
-										'category__in' => array(11),
-										'order'   => 'ASC'
-									);
-									echo CustomQuery($args1,'featured-post');
-								?>
-							</ul>
-						</div>
-					</div>
-				</div>
+				
 				</div><!-- #main -->
 			</div><!-- .main -->
 		</div><!-- #main-container -->
 		<div class="footer-container">
-			<div class="footer">	
+			<div class="footer">
+				<div class="block-angency">
+					<div class="tab-angency">
+						<div class="tab">
+							<ul class="tab-link">
+								<li class="active" lang="#tab1" tab-link="tab-link" tab-content="tab-content">Đại lý Miền Bắc</li>
+								<li lang="#tab2" tab-link="tab-link" tab-content="tab-content">Đại lý Miền Trung</li>
+								<li lang="#tab3" class="last" tab-link="tab-link" tab-content="tab-content">Đại lý Miền Nam</li>
+							</ul>
+						</div>
+						<div class="tab-content">
+							<div id="tab1" class="active">
+								<ul>
+									<?php
+										$args1 = array(
+											'category__in' => array(9),
+											'order'   => 'ASC'
+										);
+										echo CustomQuery($args1,'featured-post');
+									?>
+								</ul>
+							</div>
+							<div id="tab2">
+								<ul>
+									<?php
+										$args1 = array(
+											'category__in' => array(10),
+											'order'   => 'ASC'
+										);
+										echo CustomQuery($args1,'featured-post');
+									?>
+								</ul>
+							</div>
+							<div id="tab3">
+								<ul>
+									<?php
+										$args1 = array(
+											'category__in' => array(11),
+											'order'   => 'ASC'
+										);
+										echo CustomQuery($args1,'featured-post');
+									?>
+								</ul>
+							</div>
+						</div>
+					</div>
+				</div>
 				<footer id="colophon" class="site-footer" role="contentinfo">
 					<?php get_sidebar( 'footer' ); ?>
 					<div class="site-info">

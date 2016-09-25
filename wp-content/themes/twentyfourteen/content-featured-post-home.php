@@ -9,5 +9,11 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>">
-	<?php the_title( '<h2 class=""><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' ); ?>
+	<h2 class=""><a title="<?php echo get_the_title() ;?>" href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
+		<?php
+			$title = get_the_title();
+			cutString($title, 73);
+			echo $title;
+		?>
+	</a></h2>
 </article><!-- #post-## -->

@@ -66,6 +66,16 @@
 	} );
 
 	$( function() {
+		$('.search-top').click(function(e){
+			if (!$(this).hasClass('open-search')) {
+				$(this).addClass('open-search'); 
+				 $('.search-box').css({'display':'inline-block'});
+			}else{
+				$(this).removeClass('open-search');
+				 $('.search-box').hide("medium");
+			}
+			e.stopPropagation();
+		});
 		// Search toggle.
 		$( '.search-toggle' ).on( 'click.twentyfourteen', function( event ) {
 			var that    = $( this ),

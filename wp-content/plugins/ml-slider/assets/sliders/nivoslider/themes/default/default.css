@@ -27,21 +27,26 @@ Supports Thumbs: true
 
 .theme-default .nivo-controlNav {
 	text-align: center;
-	padding: 15px 0;
 	width: 100%;
 	z-index: 99;
+	position: absolute;
+	bottom: 0;
 }
 .theme-default .nivo-controlNav a {
 	display:inline-block;
-	width:22px;
-	height:22px;
-	background:url(bullets.png) no-repeat;
+	width:11px;
+	height:11px;
 	text-indent:-9999px;
-	border:0;
+	border:2px solid #fff;
 	margin: 0 2px;
+	border-radius: 13px;
+	background: #fff;
+	
 }
-.theme-default .nivo-controlNav a.active {
-	background-position:0 -22px;
+.theme-default .nivo-controlNav a.active ,
+.theme-default .nivo-controlNav a:hover
+{
+	background: #297618;
 }
 
 .theme-default .nivo-directionNav a {

@@ -11,8 +11,13 @@
 ?>
 
 <article id="post-<?php the_ID(); ?>" <?php post_class(); ?>>
-	<?php// twentyfourteen_post_thumbnail(); ?>
-
+	
+	<?php
+		if ( !is_single() ){
+			twentyfourteen_post_thumbnail(); 
+		}
+	?>
+	
 	<header class="entry-header">
 		<?php if ( in_array( 'category', get_object_taxonomies( get_post_type() ) ) && twentyfourteen_categorized_blog() ) : ?>
 		<!--<div class="entry-meta">
@@ -24,7 +29,7 @@
 			if ( is_single() ) :
 				the_title( '<h1 class="entry-title">', '</h1>' );
 			else :
-				the_title( '<h1 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h1>' );
+				the_title( '<h2 class="entry-title"><a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );
 			endif;
 		?>
 		<!--
@@ -49,6 +54,7 @@
 	<?php if ( !is_single() ) : ?>
 	<div class="entry-summary">
 		<?php the_excerpt(); ?>
+		<a class="show-more" href="<?php echo esc_url( get_permalink() ) ?> " rel="bookmark"> >> Xem thêm << </a>
 	</div><!-- .entry-summary -->
 	<?php else : ?>
 	<div class="entry-content">
@@ -68,6 +74,11 @@
 		?>
 	</div><!-- .entry-content -->
 	<?php endif; ?>
+	<?php if ( is_single() ) : ?>
 	<?php if(function_exists('the_ratings')) { the_ratings(); } ?>
-	<?php the_tags( '<footer class="entry-meta"><span class="tag-links">', '', '</span></footer>' ); ?>
+	<?php the_tags( '<footer class="entry-meta"><span class="tag-links"><span class="tag">Tags:<span> ', ',', '</span></footer>' ); ?>
+	<?php endif; ?>
 </article><!-- #post-## -->
+<?php if ( is_single() ) : ?>
+<?php echo do_shortcode('[related_posts_by_tax format="thumbnail_excerpt" posts_per_page="10" title=""]');?>
+<?php endif; ?>

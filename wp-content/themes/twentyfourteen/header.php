@@ -47,6 +47,9 @@
 			</div>
 			<div class="rfloat">
 				<span class="hotline">Hotline: 04.3797.0138</span>
+				<div class="search-box">
+					<?php get_search_form(); ?>
+				</div>
 				<span class="search-top">search</span>
 			</div>
 		</div>

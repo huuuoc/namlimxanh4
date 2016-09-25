@@ -9,5 +9,5 @@
 ?>
 
 <li>
-	<?php the_title( '<a href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a>' ); ?>
+	<a title="" href="<?php echo esc_url( get_permalink() )?>" rel="bookmark"><?php the_title(); ?></a>
 </li><!-- #post-## -->

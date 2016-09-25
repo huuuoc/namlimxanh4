@@ -12,7 +12,13 @@
 <article id="post-<?php the_ID(); ?>" class="first">
 	<?php twentyfourteen_post_thumbnail(); ?>
 	<div class="desc-title">
-		<?php the_title( '<h2 class=""><a title="" href="' . esc_url( get_permalink() ) . '" rel="bookmark">', '</a></h2>' );?>
+		<h2 class=""><a title="<?php echo get_the_title() ;?>" href="<?php echo esc_url( get_permalink() ); ?>" rel="bookmark">
+			<?php
+				$title = get_the_title();
+				cutString($title, 73);
+				echo $title;
+			?>
+		</a></h2>
 		<div class="entry-summary">
 			<?php 
 				$content = get_the_excerpt(); 
